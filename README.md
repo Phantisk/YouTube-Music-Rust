@@ -1,4 +1,4 @@
-# YouTube Music Rust · YTMD
+# YTMD
 
 Неофициальный клиент YouTube Music для Windows x64. Приложение написано на Rust и использует системный Microsoft Edge WebView2 для каталога и воспроизведения.
 
@@ -8,8 +8,8 @@
 
 | Версия | Как запустить |
 | --- | --- |
-| Установщик `YTMD-<версия>-setup-x64.exe` | Запусти установщик. Он добавит YTMD в меню «Пуск» и предложит создать ярлык на рабочем столе. |
-| Portable `YTMD-<версия>-portable-x64.zip` | Распакуй весь архив и запусти `YTMD.exe`. Оставь `WebView2Loader.dll` рядом с ним. |
+| Установщик `YTMD-Setup-x64.exe` | Запусти установщик. Он добавит YTMD в меню «Пуск» и предложит создать ярлык на рабочем столе. |
+| Portable `YTMD-Portable-x64.zip` | Распакуй весь архив и запусти `YTMD.exe`. Оставь `WebView2Loader.dll` рядом с ним. |
 
 Нужны Windows 10 или 11 (64 бита), интернет и [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/). Portable-версия использует профиль YTMD в Windows для хранения настроек, истории и сеанса Google.
 
@@ -25,6 +25,8 @@
 
 ## Discord Rich Presence
 
-В Discord Desktop можно показывать трек, исполнителя, обложку и прогресс. Скопируй `config.example.json` в `config.json` рядом с `YTMD.exe` или в папку `%APPDATA%\ytmd`. Запиши ID своего приложения Discord в поле `discordClientId` и загрузи [иконку YTMD](assets/youtube-music.png) в Rich Presence Art Assets под именем `youtube-music`.
+YTMD показывает трек, исполнителя, обложку и прогресс в Discord Desktop. По умолчанию функция включена. Её можно отключить в настройках YTMD. Сними флажок «Показывать трек в Discord» и нажми «Применить». YTMD уберёт текущую активность из Discord и запомнит выбор.
 
-Запусти Discord Desktop и включи показ активности в настройках конфиденциальности Discord. Перезапусти YTMD после изменения конфигурации.
+Для отображения трека запусти Discord Desktop и включи показ активности в настройках конфиденциальности Discord.
+
+Если хочешь использовать своё приложение Discord, скопируй `config.example.json` в `config.json` рядом с `YTMD.exe` или в папку `%APPDATA%\ytmd`. Запиши ID в поле `discordClientId` и загрузи [иконку YTMD](assets/youtube-music.png) в Rich Presence Art Assets под именем `youtube-music`.
